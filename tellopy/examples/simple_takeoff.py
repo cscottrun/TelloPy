@@ -17,10 +17,22 @@ def test():
         drone.wait_for_connection(60.0)
         drone.takeoff()
         sleep(5)
-        drone.down(50)
-        sleep(5)
-        drone.land()
-        sleep(5)
+        
+        drone.up(25)
+        sleep(1)
+        drone.up(0)
+        
+        drone.forward(50)
+        sleep(3)
+        drone.forward(0)
+        
+        sleep(3)
+        
+        drone.palm_land()
+        # drone.down(50)
+        # sleep(5)
+        # drone.land()
+        # sleep(5)
     except Exception as ex:
         print(ex)
     finally:
